@@ -93,7 +93,18 @@ runs:
   steps:
     - name: Checkout
       uses: actions/checkout@v3
-        
+    - name: Set up Dart
+      uses: cedx/setup-dart@v3
+      with: 
+        architecture: x64
+        release-channel: stable
+        version: latest
+    - name: check dart version
+      run: dart --version
+    - name: Install pub Dependencies
+      run: dart pub get
+    - name: Running bot
+      run: dart run
     # - name: Commit changes
     #   uses: EndBug/add-and-commit@v9
     #   with:
