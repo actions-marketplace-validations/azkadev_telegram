@@ -8,7 +8,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          repository: azkadev/azkadev.git
+          repository: azkadev/azkadev
       - name: Add Telegram Action Azkadev
         uses: azkadev/telegram@main
       - name: List Dir
