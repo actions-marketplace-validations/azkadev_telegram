@@ -17,4 +17,4 @@ jobs:
         run: |
           pwd
           ls
-          tg
+          flutter_distributor
