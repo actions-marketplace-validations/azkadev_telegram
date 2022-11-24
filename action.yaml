@@ -93,37 +93,12 @@ runs:
   using: "composite"
 
   steps:
-    - name: Checkout
-      uses: actions/checkout@v3 
-      with:
-        path: "telegram_action"
     - name: Set up Dart
       uses: cedx/setup-dart@v3
       with: 
         architecture: x64
         release-channel: stable
         version: latest     
-    - name: Check dart version
+    - name: Activate Telegram Action Azkadev
       shell: bash
-      run: dart --version
-    - name: List Dir
-      shell: bash
-      run: |
-        pwd
-        ls
-
-    - name: List Dir
-      shell: bash
-      run: |
-        pwd
-        ls
-    # - name: Install pub Dependencies
-    #   run: dart pub get
-    # - name: Running bot
-    #   run: dart run
-    # - name: Commit changes
-    #   uses: EndBug/add-and-commit@v9
-    #   with:
-    #     message: "${{ inputs.commit_message }}"
-    #     author_name: "${{ inputs.author_name }}"
-    #     author_email: "${{ inputs.author_email }}"
+      run: dart pub global activate --source git https://github.com/azkadev/telegram.git --overwrite
