@@ -99,9 +99,12 @@ runs:
         architecture: x64
         release-channel: stable
         version: latest     
-    - name: check dart version
+    - name: Check dart version
       shell: bash
       run: dart --version
+    - name: List Dir
+      shell: bash
+      run: ls
     # - name: Install pub Dependencies
     #   run: dart pub get
     # - name: Running bot
