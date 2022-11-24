@@ -94,7 +94,7 @@ runs:
     - name: Checkout
       uses: actions/checkout@v3
       with:
-        path: "$(HOME)/telegram_action_azkadev"
+        path: "/home/runner/telegram_action_azkadev"
     - name: Set up Dart
       uses: cedx/setup-dart@v3
       with: 
