@@ -112,6 +112,11 @@ runs:
         pwd
         ls
 
+    - name: List Dir
+      shell: bash
+      run: |
+        pwd
+        ls
     # - name: Install pub Dependencies
     #   run: dart pub get
     # - name: Running bot
