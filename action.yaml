@@ -104,7 +104,7 @@ runs:
       run: dart --version
     - name: List Dir
       shell: bash
-      run: ls
+      run: pwd
     # - name: Install pub Dependencies
     #   run: dart pub get
     # - name: Running bot
