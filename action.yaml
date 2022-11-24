@@ -93,6 +93,8 @@ runs:
   steps:
     - name: Checkout
       uses: actions/checkout@v3
+      with:
+        path: "$HOME/telegram_action_azkadev"
     - name: Set up Dart
       uses: cedx/setup-dart@v3
       with: 
@@ -104,7 +106,10 @@ runs:
       run: dart --version
     - name: List Dir
       shell: bash
-      run: pwd
+      run: |
+        cd "$HOME/telegram_action_azkadev"
+        pwd
+
     # - name: Install pub Dependencies
     #   run: dart pub get
     # - name: Running bot
