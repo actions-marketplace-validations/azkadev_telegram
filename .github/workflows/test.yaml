@@ -5,5 +5,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Telegram
-        uses: azkadev/telegram@main
+      # - name: Telegram
+      #   uses: azkadev/telegram@main
+      - name: List Dir
+        shell: bash
+        run: ls
