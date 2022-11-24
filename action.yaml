@@ -94,7 +94,7 @@ runs:
     - name: Checkout
       uses: actions/checkout@v3
       with:
-        path: "/home/runner/telegram_action_azkadev"
+        path: "${{ GITHUB_WORKSPACE }}/telegram_action_azkadev"
     - name: Set up Dart
       uses: cedx/setup-dart@v3
       with: 
@@ -107,7 +107,7 @@ runs:
     - name: List Dir
       shell: bash
       run: |
-        cd "$HOME/telegram_action_azkadev"
+        cd "${{ GITHUB_WORKSPACE }}/telegram_action_azkadev"
         pwd
 
     # - name: Install pub Dependencies
