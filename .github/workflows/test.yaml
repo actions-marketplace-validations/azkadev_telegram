@@ -10,8 +10,8 @@ jobs:
         with:
           repository: azkadev/azkadev
           ref: main
-      # - name: Add Telegram Action Azkadev
-      #   uses: azkadev/telegram@main
+      - name: Add Telegram Action Azkadev
+        uses: azkadev/telegram@main
       - name: List Dir
         shell: bash
         run: |
