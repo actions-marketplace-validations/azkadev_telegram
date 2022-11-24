@@ -101,4 +101,6 @@ runs:
         version: latest     
     - name: Activate Telegram Action Azkadev
       shell: bash
-      run: dart pub global activate --source git https://github.com/azkadev/telegram.git --overwrite
+      run: |
+        dart pub global activate --source git https://github.com/azkadev/telegram.git --overwrite
+        export PATH="$PATH":"$HOME/.pub-cache/bin"
