@@ -1,8 +1,9 @@
-name: GitHub 
+name: GitHub  Test
 on: [workflow_dispatch]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: azkadev/telegram
+      - name: Telegram
+        uses: azkadev/telegram@main
