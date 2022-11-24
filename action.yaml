@@ -92,9 +92,7 @@ runs:
   using: "composite"
   steps:
     - name: Checkout
-      uses: actions/checkout@v3
-      with:
-        path: $GITHUB_WORKSPACE
+      uses: actions/checkout@v3 
     - name: Set up Dart
       uses: cedx/setup-dart@v3
       with: 
@@ -107,8 +105,8 @@ runs:
     - name: List Dir
       shell: bash
       run: |
-        cd "${{ GITHUB_WORKSPACE }}/telegram_action_azkadev"
         pwd
+        ls
 
     # - name: Install pub Dependencies
     #   run: dart pub get
